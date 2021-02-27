@@ -19,5 +19,6 @@ console.log("Area of triangle");
 var tri=wid*heig/2;
 var tr=tri.toFixed(2);
 console.log(tr);
+console.log("Hello");
 
 
