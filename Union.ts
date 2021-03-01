@@ -1,16 +1,19 @@
-let arr:number[]|string[];
-let i :number;
-arr=[1998,1999,2000,2002,2003];
-console.log("DOB:");
-for(i=0;i<=arr.length;i++){
-    console.log(i);
-
-}
-arr=["Shiva","Ram","loki","Rai"];
-console.log("Names:");
-for(i=0;i<=arr.length;i++){
-    console.log(i);
-}
+let arrType:number[]|string[];   
+let i:number;   
+arrType = [1997,1985,1963,1965];  
+console.log("Numeric type array:")   
+console.log("Date Of Brith Of Trainers :") 
+  
+for(i = 0;i<arrType.length;i++){  
+   console.log(arrType[i]);  
+}  
+arrType = ["Ram","Shiva","Rai","Sri"];  
+console.log("String type array:")  
+console.log("Name Of Trainers:")   
+  
+for(i = 0;i<arrType.length;i++){   
+   console.log(arrType[i]);  
+} 
 
 
 

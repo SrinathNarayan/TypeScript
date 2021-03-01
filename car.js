@@ -1,31 +1,52 @@
-var Audi = /** @class */ (function () {
-    function Audi(name, Price, color, engine_cc, cyclinders) {
+var car = /** @class */ (function () {
+    function car(Model, name, Price, color, manuf, engine_cc, cyclinders) {
+        this.Model = Model;
         this.name = name;
-        this.color = color;
         this.Price = Price;
+        this.color = color;
+        this.manuf = manuf;
         this.engine_cc = engine_cc;
         this.cyclinders = cyclinders;
     }
-    Audi.prototype.getFullName = function () {
-        return this.name + " ";
+    car.prototype.StartCar = function () {
+        console.log("Car is Started and Running...");
     };
-    Audi.prototype.Availcar = function () {
-        console.log("Car Is Availavle In Market");
+    car.prototype.AccelerateCar = function () {
+        console.log("Acclerate Your Car...");
     };
-    Audi.prototype.TestDrive = function () {
-        console.log("Want to Test the Car");
+    car.prototype.OpenCarLock = function () {
+        console.log("Car Lock is open...");
     };
-    Audi.prototype.Delivary = function () {
-        console.log("Car Can be Delivary in  10 working days......");
+    car.prototype.CloseCarLock = function () {
+        console.log("car is locked...");
     };
-    Audi.prototype.Purchase = function () {
-        console.log("Bill Paid");
+    car.prototype.StopCar = function () {
+        console.log("Stop the Car...");
     };
-    return Audi;
+    return car;
 }());
-var car1 = new Audi("A4", 1200000, "Red", 2000, 4);
-console.log(car1);
-car1.Availcar();
-car1.TestDrive();
-car1.Delivary();
-car1.Purchase();
+var car1 = new car("Audi", "A6", 45000, "Black", "Audi", 1200, 2);
+console.log("-------------------------------");
+console.log("Car Model: " + car1.Model);
+console.log("Car Name:" + car1.name);
+console.log("Car Price: " + car1.Price + " Rs only");
+console.log("Car Color: " + car1.color);
+console.log("Car Manufacturer: " + car1.manuf);
+console.log("Car  Engine CC : " + car1.engine_cc + "CC");
+console.log("Number Of Cylinders in Car : " + car1.cyclinders);
+console.log("-------------------------------");
+console.log("You are Driving Slow...");
+car1.AccelerateCar();
+console.log("-------------------------------");
+car1.CloseCarLock();
+console.log("Now You Can Drive Your Car...");
+console.log("-------------------------------");
+car1.OpenCarLock();
+console.log("Please Lock The doors Properly...");
+console.log("-------------------------------");
+car1.StartCar();
+console.log("Have a Safe Journey...");
+console.log("-------------------------------");
+console.log("You Are Driving Fast...");
+car1.StopCar();
+console.log("-------------------------------");

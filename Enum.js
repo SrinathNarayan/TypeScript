@@ -1,23 +1,52 @@
-var Months;
-(function (Months) {
-    Months[Months["jan"] = 1] = "jan";
-    Months[Months["Feb"] = 2] = "Feb";
-    Months[Months["March"] = 3] = "March";
-    Months[Months["April"] = 4] = "April";
-    Months[Months["june"] = 5] = "june";
-    Months[Months["July"] = 6] = "July";
-})(Months || (Months = {}));
-var getMonth = function () { return 7; };
-var Mymon = getMonth();
-console.log(Months[Mymon]);
-console.log(" ");
+var Weeks;
+(function (Weeks) {
+    Weeks["Mon"] = "MonDay";
+    Weeks["Tue"] = "TuesDay";
+    Weeks["Wed"] = "WednesDay";
+    Weeks["Thrus"] = "ThrusDay";
+    Weeks["Fri"] = "FriDay";
+    Weeks["Sat"] = "SaturDay";
+    Weeks["Sun"] = "SunDay";
+})(Weeks || (Weeks = {}));
+function checkStatus(status) {
+    console.log(status);
+}
+console.log("Working Status In a Week :");
+console.log("-------------------------");
+console.log("Only WeekDays:");
+console.log("-------------");
+checkStatus(Weeks.Mon);
+checkStatus(Weeks.Tue);
+checkStatus(Weeks.Wed);
+checkStatus(Weeks.Thrus);
+checkStatus(Weeks.Fri);
+console.log("-------------");
+console.log("Only Weekends:");
+console.log("-------------");
+checkStatus(Weeks.Sun);
+checkStatus(Weeks.Sat);
 var Languages;
 (function (Languages) {
-    Languages[Languages["Android"] = 0] = "Android";
-    Languages[Languages["java"] = 1] = "java";
-    Languages[Languages["Vbnet"] = 2] = "Vbnet";
-    Languages[Languages["Angular"] = 3] = "Angular";
-    Languages[Languages["Typescript"] = 4] = "Typescript";
-    Languages["Dbms"] = "Sql";
+    Languages["Monday"] = "Android";
+    Languages["Firday"] = "Vbnet";
+    Languages["Sunday"] = "Typescript";
+    Languages["Saturday"] = "Angular";
+    Languages["Wednesday"] = "Dbms";
+    Languages["TuesDay"] = "Java";
 })(Languages || (Languages = {}));
-console.log(Languages);
+function checkCode(code) {
+    console.log(code);
+}
+console.log("\n");
+console.log("Language Status In a Week :");
+console.log("-------------------------");
+console.log("Only WeekDays:");
+console.log("-------------");
+checkCode(Languages.Monday);
+checkCode(Languages.TuesDay);
+checkCode(Languages.Firday);
+console.log("-------------");
+console.log("Only Weekends:");
+console.log("-------------");
+checkCode(Languages.Sunday);
+checkCode(Languages.Saturday);

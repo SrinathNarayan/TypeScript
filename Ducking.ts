@@ -1,25 +1,25 @@
-class Dog {  
-    sound = "barking";  
+class Trainer {  
+    work = "Teaching";  
 }  
-class Lion {  
-    sound = "roaring";  
+class Trainee {  
+    work = "Studing";  
 }  
-class Goat {  
-    sound = "bleat";  
-    swim(){  
-        console.log("Cannot Swim!");  
+class Hr {  
+    work = "Supervising";  
+    train(){  
+        console.log(" Cannot Train!");  
     }  
 }  
-let lion: Lion = new Dog();  
-let dog: Dog = new Lion();  
-let lionTwo: Lion = new Goat();  
- 
-console.log("Lion Sound: "+lion.sound);  
-console.log("Dog sound: "+dog.sound);  
-console.log("Lion sound: "+lionTwo.sound);  
+let t1: Trainee = new Trainer();  
+let t2: Trainer = new Trainee();  
+let TraineTwo: Trainee = new Hr();  
+console.log("--------------------------------") ;
+console.log("Trainer Work: "+t2.work);  
+console.log("Trainee Work: "+t1.work);  
+console.log("Hr Work: "+TraineTwo.work);  
+console.log("--------------------------------"); 
 
 
 
 
 
-//let goat: Goat = new Lion(); // IDE & compiler error 

@@ -4,101 +4,108 @@ abstract class Car {
     constructor(name: string) {
         this.name = name
     }
-    public absbrake() {
-        console.log("abs is activated");
-    }
+    
     abstract drivecar(): boolean;
     abstract startcar():string;
-    abstract cruisecontrol():boolean;
-    
+    abstract Autocontrol():boolean;
     abstract stopcar():string;
+    
 
 }
-class xuv extends Car {
+class Audi extends Car {
+  
     constructor(val: string) {
         super(val);
     }
     drivecar(): boolean {
-        console.log("xuv500 is a suv model")
+        console.log("AudiA6 is a Audi model")
         return true;
     }
     stopcar():string{
-        console.log("stop the car");
+        console.log("Stoped");
         return "stop";
     }
     startcar():string{
-    console.log("car is running");
-    return "car started"
+    console.log("Car still Running");
+    return "Car Runing"
     }
     
-    cruisecontrol():boolean{
-        console.log("cruise control activated");
+    Autocontrol():boolean{
+        console.log("Auto Driving control activated");
         return true
         }
 }
-let x: xuv = new xuv("mahindra");
-x.absbrake();
+let x: Audi = new Audi("A6");
+console.log("---------------------------- ")
+console.log(" Model : Audi A6 Manuf:Audi  ")
+console.log("---------------------------- ")
 x.drivecar();
 x.stopcar();
 x.startcar();
-x.cruisecontrol();
+x.Autocontrol();
 
 class honda extends Car {
+    
     constructor(val: string) {
         super(val);
     }
     drivecar(): boolean {
-        console.log("city is a sedan model")
+        console.log("Honda is a Sedan model")
         return true;
     }
     stopcar():string{
-        console.log("stop the car");
+        console.log("Car Stopped");
         return "stop";
     }
     startcar():string{
-    console.log("car is running");
+    console.log("Car still Running");
     return "car started"
     }
     
-    cruisecontrol():boolean{
-        console.log("cruise control activated");
+    Autocontrol():boolean{
+        console.log("Auto Driving activated");
         return true
         }
 }
 let sedan: honda = new honda("city");
-sedan.absbrake();
+console.log("---------------------------- ")
+console.log(" Model : Sedan Manuf:Honda City ")
+console.log("---------------------------- ")
 sedan.drivecar();
 sedan.stopcar();
 sedan.startcar();
-sedan.cruisecontrol();
+sedan.Autocontrol();
 
 class polo extends Car {
+    
     constructor(val: string) {
         super(val);
     }
     drivecar(): boolean {
-        console.log("polo is a hatchback model")
+        console.log("Polo is a volksWagan model")
         return true;
     }
     stopcar():string{
-        console.log("stop the car");
+        console.log("Car Stopped");
         return "stop";
     }
     startcar():string{
-    console.log("car is running");
+    console.log("Car still Running");
     return "car started"
     }
     
-    cruisecontrol():boolean{
-        console.log("cruise control activated");
+    Autocontrol():boolean{
+        console.log("Auto Driving activated");
         return true
         }
 }
-let vw: polo = new polo("GT_TSI");
-vw.absbrake();
+let vw: polo = new polo("volksWagan");
+console.log("---------------------------- ")
+console.log(" Model :Polo Manuf :volksWagan ")
+console.log("---------------------------- ")
 vw.drivecar();
 vw.stopcar();
 vw.startcar();
-vw.cruisecontrol();
+vw.Autocontrol();
 
 

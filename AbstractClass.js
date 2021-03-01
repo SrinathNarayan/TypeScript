@@ -17,95 +17,98 @@ var Car = /** @class */ (function () {
     function Car(name) {
         this.name = name;
     }
-    Car.prototype.absbrake = function () {
-        console.log("abs is activated");
-    };
     return Car;
 }());
-var xuv = /** @class */ (function (_super) {
-    __extends(xuv, _super);
-    function xuv(val) {
+var Audi = /** @class */ (function (_super) {
+    __extends(Audi, _super);
+    function Audi(val) {
         return _super.call(this, val) || this;
     }
-    xuv.prototype.drivecar = function () {
-        console.log("xuv500 is a suv model");
+    Audi.prototype.drivecar = function () {
+        console.log("AudiA6 is a Audi model");
         return true;
     };
-    xuv.prototype.stopcar = function () {
-        console.log("stop the car");
+    Audi.prototype.stopcar = function () {
+        console.log("Stoped");
         return "stop";
     };
-    xuv.prototype.startcar = function () {
-        console.log("car is running");
-        return "car started";
+    Audi.prototype.startcar = function () {
+        console.log("Car still Running");
+        return "Car Runing";
     };
-    xuv.prototype.cruisecontrol = function () {
-        console.log("cruise control activated");
+    Audi.prototype.Autocontrol = function () {
+        console.log("Auto Driving control activated");
         return true;
     };
-    return xuv;
+    return Audi;
 }(Car));
-var x = new xuv("mahindra");
-x.absbrake();
+var x = new Audi("A6");
+console.log("---------------------------- ");
+console.log(" Model : Audi A6 Manuf:Audi  ");
+console.log("---------------------------- ");
 x.drivecar();
 x.stopcar();
 x.startcar();
-x.cruisecontrol();
+x.Autocontrol();
 var honda = /** @class */ (function (_super) {
     __extends(honda, _super);
     function honda(val) {
         return _super.call(this, val) || this;
     }
     honda.prototype.drivecar = function () {
-        console.log("city is a sedan model");
+        console.log("Honda is a Sedan model");
         return true;
     };
     honda.prototype.stopcar = function () {
-        console.log("stop the car");
+        console.log("Car Stopped");
         return "stop";
     };
     honda.prototype.startcar = function () {
-        console.log("car is running");
+        console.log("Car still Running");
         return "car started";
     };
-    honda.prototype.cruisecontrol = function () {
-        console.log("cruise control activated");
+    honda.prototype.Autocontrol = function () {
+        console.log("Auto Driving activated");
         return true;
     };
     return honda;
 }(Car));
 var sedan = new honda("city");
-sedan.absbrake();
+console.log("---------------------------- ");
+console.log(" Model : Sedan Manuf:Honda City ");
+console.log("---------------------------- ");
 sedan.drivecar();
 sedan.stopcar();
 sedan.startcar();
-sedan.cruisecontrol();
+sedan.Autocontrol();
 var polo = /** @class */ (function (_super) {
     __extends(polo, _super);
     function polo(val) {
         return _super.call(this, val) || this;
     }
     polo.prototype.drivecar = function () {
-        console.log("polo is a hatchback model");
+        console.log("Polo is a volksWagan model");
         return true;
     };
     polo.prototype.stopcar = function () {
-        console.log("stop the car");
+        console.log("Car Stopped");
         return "stop";
     };
     polo.prototype.startcar = function () {
-        console.log("car is running");
+        console.log("Car still Running");
         return "car started";
     };
-    polo.prototype.cruisecontrol = function () {
-        console.log("cruise control activated");
+    polo.prototype.Autocontrol = function () {
+        console.log("Auto Driving activated");
         return true;
     };
     return polo;
 }(Car));
-var vw = new polo("GT_TSI");
-vw.absbrake();
+var vw = new polo("volksWagan");
+console.log("---------------------------- ");
+console.log(" Model :Polo Manuf :volksWagan ");
+console.log("---------------------------- ");
 vw.drivecar();
 vw.stopcar();
 vw.startcar();
-vw.cruisecontrol();
+vw.Autocontrol();

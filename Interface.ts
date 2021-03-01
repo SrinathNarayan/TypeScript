@@ -1,10 +1,10 @@
-export default interface paymentbook{
+export default interface paymentmanager{
     payid: number;
     name: string;
     bank:string;
-    Mode: string;
     branch:string;
-    Amt: number;
+    Mode :string;
+    
       
     dopayment():string;
     

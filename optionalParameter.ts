@@ -1,42 +1,42 @@
 //optional parameter
+console.log("------------------------------");
+console.log("Optional Parameters"); 
+console.log("------------------------------"); 
+function showDetails(id:number,name:string,Platfrom?:string) {  
+   
+    console.log("ID:", id, " Name:",name);   
 
-let students=function (id: number,name: string,email?: string){
-    console.log("ID:",id,"Name:",name);
-    if(email!=undefined){
-        console.log("EMAIL_ID:",email)
-    }
-    students(81324,"jayasurya");
-    students(81326,"jana","jana2345@gmail.com");
-    }
+    if(Platfrom!=undefined)    
+    console.log("PlatFrom:",Platfrom);   
     
-    
+ }  
+ 
+ showDetails(321,"Muthu");  
+ showDetails(123,"Shiva","Angular");  
+console.log("------------------------------"); 
+ 
     //default parameter
-    
-    let prof=function (name: string,college:string="srm"){
-        return name+""+college+"!";
+
+console.log("Default Parameters"); 
+console.log("------------------------------"); 
+    let train=function (name: string,Platfrom:string="Java"){
+        return name+" "+Platfrom+" !...";
     
     }
-    console.log(prof("surya"));
-    console.log(prof("niranjan"));
-    console.log(prof("gokul"))
-    
+console.log(train("Shiva -"));
+console.log(train("Muthu -","Angular"));
+console.log(train("Mota -"))
+console.log(train("Piyush -","Android"));
+console.log("------------------------------"); 
     //rest parameter
-    
-    let num=function(a:number,...b:number[]):boolean{
-        console.log(a);
-        console.log(b);
-        return true;
+console.log("Rest Parameters"); 
+console.log("------------------------------"); 
+function test(...args: number[]) {
+    console.log(args.length);
+    console.log(args);
+    for (let i = 0; i < args.length; i++) {
+        console.log(args[i]);
     }
-    num(4,5,6,98);
-    
-    // function sum(a:number,...b:number[]):number{
-    //     let result=a;
-    //     for(var i=0;i<b.length;i++ ){
-    //         result=result+b[i];
-    //     }
-    //     return
-    // }
-    // let result1=sum(3,5)
-    // let result2=sum(3,5,6,9,10)
-    // console.log(result1+"\n"+result2)
-    
+}
+test(1,3);
+   
